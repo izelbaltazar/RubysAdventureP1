@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour
     Rigidbody2D rigidbody2D;
     float timer;
     int direction = 1;
+    bool broken = true;
 
     Animator animator;
 
@@ -25,6 +26,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // remember ! inverse the test, so if broken is true !broken will be false and return won't be executed. 
         timer -= Time.deltaTime;
 
         if (timer < 0)
