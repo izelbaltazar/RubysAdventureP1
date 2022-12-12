@@ -26,7 +26,7 @@ public class ProjectTile : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         EnemyController e = other.collider.GetComponent<EnemyController>();
-        if (e !=null)
+        if (e != null)
         { 
             e.Fix(); 
     }
